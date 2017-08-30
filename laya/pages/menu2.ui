@@ -2,7 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":1,
-    "selecteID":8,
+    "selecteID":5,
     "props":{"width":800,"sceneColor":"#000000","height":480},
     "nodeParent":-1,
     "label":"View",
@@ -15,20 +15,20 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":-5,"x":5,"skin":"img/history.jpg"},
+            "props":{"y":0,"x":0,"skin":"img/history.jpg"},
             "nodeParent":1,
             "label":"Image",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":3,
+            "compId":9,
             "child":[
                 ]
         },
         {
             "x":15,
             "type":"Image",
-            "props":{"y":125,"x":17,"var":"dznq","skin":"img/_1dznq.jpg"},
+            "props":{"y":142,"x":8,"var":"dznq","skin":"img/_1dznq.jpg"},
             "nodeParent":1,
             "label":"Image(dznq)",
             "isDirectory":false,
@@ -41,7 +41,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":125,"x":414,"var":"ccjq","skin":"img/_2ccjq.jpg"},
+            "props":{"y":283,"x":9,"var":"ccjq","skin":"img/_2ccjq.jpg"},
             "nodeParent":1,
             "label":"Image(ccjq)",
             "isDirectory":false,
@@ -54,7 +54,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":287,"x":17,"var":"cbzz","skin":"img/_3cbzz.jpg"},
+            "props":{"y":139,"x":407,"var":"cbzz","skin":"img/_3cbzz.jpg"},
             "nodeParent":1,
             "label":"Image(cbzz)",
             "isDirectory":false,
@@ -67,7 +67,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":287,"x":415,"var":"sgdl","skin":"img/_4sgdl.jpg"},
+            "props":{"y":282,"x":409,"var":"sgdl","skin":"img/_4sgdl.jpg"},
             "nodeParent":1,
             "label":"Image(sgdl)",
             "isDirectory":false,
@@ -79,14 +79,14 @@
         },
         {
             "x":15,
-            "type":"Image",
-            "props":{"y":0,"x":700,"var":"backBtn","skin":"img/back.jpg"},
+            "type":"Button",
+            "props":{"y":428,"x":698,"width":100,"var":"backBtn","stateNum":"1","skin":"img/btn_bg.jpg","labelSize":20,"label":"返回","height":50},
             "nodeParent":1,
-            "label":"Image(backBtn)",
+            "label":"Button(backBtn)",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":8,
+            "compId":14,
             "child":[
                 ]
         }],

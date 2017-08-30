@@ -21,7 +21,7 @@ Battlefiled.prototype.load = function() {
 }
 
 Battlefiled.prototype.completeHandler = function () {
-  console.log(2222);
+
 }
 
 //鼠标按下拖动地图

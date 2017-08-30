@@ -2,13 +2,21 @@ var Event = Laya.Event;
 var Handler = Laya.Handler;
 
 Laya.init(800, 480, Laya.WebGL);
+Laya.stage.screenMode = Laya.Stage.SCREEN_HORIZONTAL;
+// Laya.stage.fullScreenEnabled = true;
+Laya.stage.scaleMode = Laya.Stage.SCALE_FIXED_AUTO;
+
+// Laya.stage.scaleMode = Laya.Stage.SCALE_NOBORDER;
+// Laya.stage.alignH = Laya.Stage.ALIGN_CENTER;
+// Laya.stage.alignV = Laya.Stage.ALIGN_MIDDLE;
+
 loadImages();
 showCG();
 
 function loadImages(tl) {
   Laya.loader.load(['cg/cg_01.jpg', 'cg/cg_02.jpg', 'cg/cg_03.jpg', 'cg/cg_04.jpg', 'cg/cg_05.jpg']);
   Laya.loader.load(['img/gmstart.jpg']);
-  Laya.loader.load(['img/history.jpg', 'img/back.jpg']);
+  Laya.loader.load(['img/history.jpg', 'img/btn_bg.jpg']);
   Laya.loader.load(['img/white.jpg', 'img/who.jpg']);
   Laya.loader.load(['img/map.jpg', 'img/right.jpg']);
 }
@@ -72,6 +80,6 @@ function showBattlefiled() {
   battlefield.load();
 }
 
-setTimeout(function() {
-  showBattlefiled();
-}, 2000);
+// setTimeout(function() {
+//   showBattlefiled();
+// }, 2000);
