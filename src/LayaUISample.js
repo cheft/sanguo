@@ -63,4 +63,15 @@ function onShowSelectLord() {
 function onShowMain() {
   var main = new mainUI();
   Laya.stage.addChild(main);
+
+  main.info.on(Event.CLICK, this, showBattlefiled);
 }
+
+function showBattlefiled() {
+  var battlefield = new Battlefiled();
+  battlefield.load();
+}
+
+setTimeout(function() {
+  showBattlefiled();
+}, 2000);

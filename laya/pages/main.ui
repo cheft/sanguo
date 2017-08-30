@@ -28,9 +28,9 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":0,"x":680,"skin":"img/right.jpg"},
+            "props":{"y":0,"x":680,"var":"info","skin":"img/right.jpg"},
             "nodeParent":1,
-            "label":"Image",
+            "label":"Image(info)",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,

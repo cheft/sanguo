@@ -2,9 +2,27 @@ var CLASS$=Laya.class;
 var STATICATTR$=Laya.static;
 var View=laya.ui.View;
 var Dialog=laya.ui.Dialog;
+var battlefieldUI=(function(_super){
+		function battlefieldUI(){
+			
+
+			battlefieldUI.__super.call(this);
+		}
+
+		CLASS$(battlefieldUI,'ui.battlefieldUI',_super);
+		var __proto__=battlefieldUI.prototype;
+		__proto__.createChildren=function(){
+		    
+			laya.ui.Component.prototype.createChildren.call(this);
+			this.createView(battlefieldUI.uiView);
+		}
+		battlefieldUI.uiView={"type":"View","props":{"width":800,"height":480}};
+		return battlefieldUI;
+	})(View);
 var mainUI=(function(_super){
 		function mainUI(){
 			
+		    this.info=null;
 
 			mainUI.__super.call(this);
 		}
@@ -16,7 +34,7 @@ var mainUI=(function(_super){
 			laya.ui.Component.prototype.createChildren.call(this);
 			this.createView(mainUI.uiView);
 		}
-		mainUI.uiView={"type":"View","props":{"width":800,"height":480},"child":[{"type":"Image","props":{"y":0,"x":0,"skin":"img/map.jpg"}},{"type":"Image","props":{"y":0,"x":680,"skin":"img/right.jpg"}}]};
+		mainUI.uiView={"type":"View","props":{"width":800,"height":480},"child":[{"type":"Image","props":{"y":0,"x":0,"skin":"img/map.jpg"}},{"type":"Image","props":{"y":0,"x":680,"var":"info","skin":"img/right.jpg"}}]};
 		return mainUI;
 	})(View);
 var menu1UI=(function(_super){
