@@ -83,8 +83,13 @@ var menu2UI=(function(_super){
 var selectLordUI=(function(_super){
 		function selectLordUI(){
 			
+		    this.whoMap=null;
 		    this.lordList=null;
+		    this.okBtn=null;
 		    this.backBtn=null;
+		    this.lordHead=null;
+		    this.lordDesc=null;
+		    this.lordInfo=null;
 
 			selectLordUI.__super.call(this);
 		}
@@ -96,6 +101,6 @@ var selectLordUI=(function(_super){
 			laya.ui.Component.prototype.createChildren.call(this);
 			this.createView(selectLordUI.uiView);
 		}
-		selectLordUI.uiView={"type":"View","props":{"width":800,"height":480},"child":[{"type":"Image","props":{"y":0,"x":0,"skin":"img/white.jpg"}},{"type":"Image","props":{"y":40,"x":40,"width":538,"skin":"img/who.jpg","height":400}},{"type":"List","props":{"y":44,"x":624,"width":131,"var":"lordList","repeatY":8,"repeatX":1,"name":"m_label","height":354},"child":[{"type":"Label","props":{"width":107,"text":"赵云","strokeColor":"#ffffff","stroke":5,"renderType":"render","name":"render","height":40,"fontSize":30,"color":"#210732","bold":true}}]},{"type":"VScrollBar","props":{"y":50,"x":732,"name":"scrollBar"}},{"type":"Button","props":{"y":428,"x":590,"width":100,"stateNum":1,"skin":"img/btn_bg.jpg","labelSize":20,"label":"确定","height":50}},{"type":"Button","props":{"y":428,"x":698,"width":100,"var":"backBtn","stateNum":1,"skin":"img/btn_bg.jpg","labelSize":20,"label":"返回","height":50}}]};
+		selectLordUI.uiView={"type":"View","props":{"width":800,"height":480},"child":[{"type":"Image","props":{"y":0,"x":0,"skin":"img/white.jpg"}},{"type":"Image","props":{"y":10,"x":10,"width":420,"var":"whoMap","skin":"img/who.jpg","height":320}},{"type":"List","props":{"y":15,"x":598,"width":164,"var":"lordList","spaceY":10,"repeatY":7,"repeatX":1,"height":369},"child":[{"type":"Box","props":{"y":0,"x":10,"width":145,"renderType":"render","name":"render","height":40},"child":[{"type":"Label","props":{"y":4,"x":31,"width":86,"strokeColor":"#ffffff","stroke":2,"padding":"4","name":"name","height":34,"fontSize":26,"color":"#080808","bold":true}}]},{"type":"VScrollBar","props":{"y":1,"x":130,"width":1,"name":"scrollBar","height":374}}]},{"type":"Button","props":{"y":421,"x":584,"width":100,"var":"okBtn","stateNum":1,"skin":"img/btn_bg.jpg","labelSize":20,"label":"确定","height":50}},{"type":"Button","props":{"y":420,"x":692,"width":100,"var":"backBtn","stateNum":1,"skin":"img/btn_bg.jpg","labelSize":20,"label":"返回","height":50}},{"type":"Image","props":{"y":14,"x":465,"width":120,"var":"lordHead","height":120}},{"type":"Label","props":{"y":359,"x":17,"wordWrap":true,"width":552,"var":"lordDesc","strokeColor":"#ffffff","stroke":2,"leading":8,"height":104,"fontSize":20,"bold":true}},{"type":"Label","props":{"y":146,"x":464,"width":121,"var":"lordInfo","height":192,"fontSize":20}}]};
 		return selectLordUI;
 	})(View);
