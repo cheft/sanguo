@@ -2,7 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":1,
-    "selecteID":16,
+    "selecteID":23,
     "props":{"width":800,"sceneColor":"#000000","height":480},
     "nodeParent":-1,
     "label":"View",
@@ -147,7 +147,7 @@
         {
             "x":15,
             "type":"Label",
-            "props":{"y":146,"x":464,"width":121,"var":"lordInfo","height":192,"fontSize":20},
+            "props":{"y":146,"x":464,"width":121,"var":"lordInfo","strokeColor":"#ffffff","stroke":1,"height":192,"fontSize":20,"bold":true},
             "nodeParent":1,
             "label":"Label(lordInfo)",
             "isDirectory":false,

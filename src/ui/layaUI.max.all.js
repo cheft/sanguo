@@ -23,6 +23,11 @@ var mainUI=(function(_super){
 		function mainUI(){
 			
 		    this.info=null;
+		    this.lordHead=null;
+		    this.lordName=null;
+		    this.cityLength=null;
+		    this.heroLength=null;
+		    this.menuBtn=null;
 
 			mainUI.__super.call(this);
 		}
@@ -34,7 +39,7 @@ var mainUI=(function(_super){
 			laya.ui.Component.prototype.createChildren.call(this);
 			this.createView(mainUI.uiView);
 		}
-		mainUI.uiView={"type":"View","props":{"width":800,"height":480},"child":[{"type":"Image","props":{"y":0,"x":0,"skin":"img/map.jpg"}},{"type":"Image","props":{"y":0,"x":680,"var":"info","skin":"img/right.jpg"}}]};
+		mainUI.uiView={"type":"View","props":{"width":800,"height":480},"child":[{"type":"Image","props":{"y":0,"x":-10,"skin":"img/map.jpg"}},{"type":"Image","props":{"y":0,"x":690,"width":110,"var":"info","skin":"img/right.jpg","height":480}},{"type":"Image","props":{"y":60,"x":704,"width":80,"var":"lordHead","height":80}},{"type":"Label","props":{"y":24,"x":705,"width":79,"var":"lordName","height":30,"fontSize":24,"color":"#ffffff","bold":true,"align":"center"}},{"type":"Label","props":{"y":146,"x":751,"width":33,"var":"cityLength","text":"1","height":30,"fontSize":24,"color":"#ffffff","bold":true,"align":"center"}},{"type":"Label","props":{"y":196,"x":747,"width":44,"var":"heroLength","text":"1","height":30,"fontSize":24,"color":"#ffffff","bold":true,"align":"center"}},{"type":"Label","props":{"y":264,"x":704,"width":44,"text":"203","height":30,"fontSize":28,"color":"#ffffff","bold":true,"align":"center"}},{"type":"Label","props":{"y":310,"x":715,"width":35,"text":"12","height":30,"fontSize":28,"color":"#ffffff","bold":true,"align":"center"}},{"type":"Button","props":{"y":413,"x":699,"width":92,"var":"menuBtn","stateNum":1,"skin":"img/btn_bg.jpg","labelSize":24,"label":"菜单","height":46}}]};
 		return mainUI;
 	})(View);
 var menu1UI=(function(_super){
@@ -101,6 +106,6 @@ var selectLordUI=(function(_super){
 			laya.ui.Component.prototype.createChildren.call(this);
 			this.createView(selectLordUI.uiView);
 		}
-		selectLordUI.uiView={"type":"View","props":{"width":800,"height":480},"child":[{"type":"Image","props":{"y":0,"x":0,"skin":"img/white.jpg"}},{"type":"Image","props":{"y":10,"x":10,"width":420,"var":"whoMap","skin":"img/who.jpg","height":320}},{"type":"List","props":{"y":15,"x":598,"width":164,"var":"lordList","spaceY":10,"repeatY":7,"repeatX":1,"height":369},"child":[{"type":"Box","props":{"y":0,"x":10,"width":145,"renderType":"render","name":"render","height":40},"child":[{"type":"Label","props":{"y":4,"x":31,"width":86,"strokeColor":"#ffffff","stroke":2,"padding":"4","name":"name","height":34,"fontSize":26,"color":"#080808","bold":true}}]},{"type":"VScrollBar","props":{"y":1,"x":130,"width":1,"name":"scrollBar","height":374}}]},{"type":"Button","props":{"y":421,"x":584,"width":100,"var":"okBtn","stateNum":1,"skin":"img/btn_bg.jpg","labelSize":20,"label":"确定","height":50}},{"type":"Button","props":{"y":420,"x":692,"width":100,"var":"backBtn","stateNum":1,"skin":"img/btn_bg.jpg","labelSize":20,"label":"返回","height":50}},{"type":"Image","props":{"y":14,"x":465,"width":120,"var":"lordHead","height":120}},{"type":"Label","props":{"y":359,"x":17,"wordWrap":true,"width":552,"var":"lordDesc","strokeColor":"#ffffff","stroke":2,"leading":8,"height":104,"fontSize":20,"bold":true}},{"type":"Label","props":{"y":146,"x":464,"width":121,"var":"lordInfo","height":192,"fontSize":20}}]};
+		selectLordUI.uiView={"type":"View","props":{"width":800,"height":480},"child":[{"type":"Image","props":{"y":0,"x":0,"skin":"img/white.jpg"}},{"type":"Image","props":{"y":10,"x":10,"width":420,"var":"whoMap","skin":"img/who.jpg","height":320}},{"type":"List","props":{"y":15,"x":598,"width":164,"var":"lordList","spaceY":10,"repeatY":7,"repeatX":1,"height":369},"child":[{"type":"Box","props":{"y":0,"x":10,"width":145,"renderType":"render","name":"render","height":40},"child":[{"type":"Label","props":{"y":4,"x":31,"width":86,"strokeColor":"#ffffff","stroke":2,"padding":"4","name":"name","height":34,"fontSize":26,"color":"#080808","bold":true}}]},{"type":"VScrollBar","props":{"y":1,"x":130,"width":1,"name":"scrollBar","height":374}}]},{"type":"Button","props":{"y":421,"x":584,"width":100,"var":"okBtn","stateNum":1,"skin":"img/btn_bg.jpg","labelSize":20,"label":"确定","height":50}},{"type":"Button","props":{"y":420,"x":692,"width":100,"var":"backBtn","stateNum":1,"skin":"img/btn_bg.jpg","labelSize":20,"label":"返回","height":50}},{"type":"Image","props":{"y":14,"x":465,"width":120,"var":"lordHead","height":120}},{"type":"Label","props":{"y":359,"x":17,"wordWrap":true,"width":552,"var":"lordDesc","strokeColor":"#ffffff","stroke":2,"leading":8,"height":104,"fontSize":20,"bold":true}},{"type":"Label","props":{"y":146,"x":464,"width":121,"var":"lordInfo","strokeColor":"#ffffff","stroke":1,"height":192,"fontSize":20,"bold":true}}]};
 		return selectLordUI;
 	})(View);

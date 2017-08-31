@@ -2,7 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":1,
-    "selecteID":2,
+    "selecteID":4,
     "props":{"width":800,"sceneColor":"#000000","height":480},
     "nodeParent":-1,
     "label":"View",
@@ -15,7 +15,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":0,"x":0,"skin":"img/map.jpg"},
+            "props":{"y":0,"x":-10,"skin":"img/map.jpg"},
             "nodeParent":1,
             "label":"Image",
             "isDirectory":false,
@@ -28,13 +28,104 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":0,"x":680,"var":"info","skin":"img/right.jpg"},
+            "props":{"y":0,"x":690,"width":110,"var":"info","skin":"img/right.jpg","height":480},
             "nodeParent":1,
             "label":"Image(info)",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
             "compId":2,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "props":{"y":60,"x":704,"width":80,"var":"lordHead","height":80},
+            "nodeParent":1,
+            "label":"Image(lordHead)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":5,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Label",
+            "props":{"y":24,"x":705,"width":79,"var":"lordName","height":30,"fontSize":24,"color":"#ffffff","bold":true,"align":"center"},
+            "nodeParent":1,
+            "label":"Label(lordName)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":13,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Label",
+            "props":{"y":146,"x":751,"width":33,"var":"cityLength","text":"1","height":30,"fontSize":24,"color":"#ffffff","bold":true,"align":"center"},
+            "nodeParent":1,
+            "label":"Label(cityLength)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":6,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Label",
+            "props":{"y":196,"x":747,"width":44,"var":"heroLength","text":"1","height":30,"fontSize":24,"color":"#ffffff","bold":true,"align":"center"},
+            "nodeParent":1,
+            "label":"Label(heroLength)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":8,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Label",
+            "props":{"y":264,"x":704,"width":44,"text":"203","height":30,"fontSize":28,"color":"#ffffff","bold":true,"align":"center"},
+            "nodeParent":1,
+            "label":"Label",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":9,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Label",
+            "props":{"y":310,"x":715,"width":35,"text":"12","height":30,"fontSize":28,"color":"#ffffff","bold":true,"align":"center"},
+            "nodeParent":1,
+            "label":"Label",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":10,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Button",
+            "props":{"y":413,"x":699,"width":92,"var":"menuBtn","stateNum":"1","skin":"img/btn_bg.jpg","labelSize":24,"label":"菜单","height":46},
+            "nodeParent":1,
+            "label":"Button(menuBtn)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":12,
             "child":[
                 ]
         }],

@@ -11,11 +11,11 @@
     this.handleData();
   }
 
-  SelectLord.prototype.open = function() {
+  SelectLord.prototype.start = function() {
     Laya.stage.addChild(this.ui);
   }
 
-  SelectLord.prototype.close = function() {
+  SelectLord.prototype.stop = function() {
     Laya.stage.removeChild(this.ui);
   }
 
@@ -31,40 +31,36 @@
     this.ui.lordList.vScrollBarSkin = '';
 
     // 绑定返回按钮事件
-    this.ui.backBtn.on(Event.CLICK, this, this.close);
+    this.ui.backBtn.on(Event.CLICK, this, this.stop);
+    this.ui.okBtn.on(Event.CLICK, this, this.okHandler)
   }
 
   SelectLord.prototype.handleData = function() {
-    var arr =  data[this.period + 'Lord'];
-    var tmp = [];
-    for (var i = 0; i < arr.length; i++) {
-      tmp.push({name: arr[i]});
-    }
-    this.ui.lordList.array = tmp;
+    this.ui.lordList.array = data[this.period + 'Lord'];
     this.ui.lordList.renderHandler = new Handler(this, this.lordListRender);
-
+    // this.ui.lordList.selectedIndex = 0;
     var headFilter = new Laya.GlowFilter('#000000', 5, 0, 0);  
     this.ui.lordHead.filters = [headFilter];
   }
 
   SelectLord.prototype.lordListRender = function(cell, index) {
     var label = cell.getChildByName('name');
+    label.text = cell._dataSource;
     if (index === 0) {
       this.lordLabelClick(0, label);
-      this.lastSelectedLabel = label;
     }
     label.on(Event.CLICK, this, this.lordLabelClick, [index, label]);
   }
 
   SelectLord.prototype.lordLabelClick = function(index, label) {
+    this.ui.lordList.selectIndex = index;
     // 将上次选中的 label 边框颜色还原，然后设置当前选中
     if (this.lastSelectedLabel) this.lastSelectedLabel.borderColor = '';
     label.borderColor = '#131313';
     this.lastSelectedLabel = label;
-    
     var name = label.text;
     this.fillLordInfo(index, name);
-    this.fillHeadImage(name);
+    this.ui.lordHead.graphics.drawTexture(util.getHeadImage(this.period, name), 0, 0, 120, 120);
   }
 
   SelectLord.prototype.fillLordInfo = function(index, name) {
@@ -106,21 +102,13 @@
       sp.graphics.drawRect(10 + parseInt(pos[0], 10), 10 + parseInt(pos[1], 10), 20, 20, '#000000');
     }
   }
-  
-  SelectLord.prototype.fillHeadImage = function(name) {
-    // 从所有将领列表中获取君主的索引
-    var imgIndex = data[this.period + 'HerosName'].indexOf(name);
-    // 因为头像是分不同时间，并且所有的头像在一起的
-    var texture = Laya.loader.getRes('img/head_' + this.period + '.jpg');
-    // 通过索引算出头像在第几行，头像从左往右，从上往下数的
-    var row = Math.floor(imgIndex / 10);
-    // 算出头像在第几列
-    var col = imgIndex % 10;
-    // 通过截取的方式获得纹理切图: x, y, width, height
-    var texEnd = Laya.Texture.create(texture,  col * 120, row * 120, 120, 120);
-    // 显示在头像上
-    this.ui.lordHead.graphics.drawTexture(texEnd, 0, 0, 120, 120);
+
+  SelectLord.prototype.okHandler = function() {
+    var main = new Main(this.period, this.ui.lordList.selectIndex);
+    main.start();
   }
   
-  global.SelectLord = SelectLord;
+  global.onSelectLord = function() {
+    new SelectLord(this).start();
+  };
 })(window);

@@ -42,26 +42,14 @@ function onShowMenu2() {
 
   menu2.backBtn.on(Event.CLICK, menu2, onBack);
 
-  var dznqSelectLord = new SelectLord('dznq');
-  var ccjqSelectLord = new SelectLord('ccjq');
-  var cbzzSelectLord = new SelectLord('cbzz');
-  var sgdlSelectLord = new SelectLord('sgdl');
-
-  menu2.dznq.on(Event.CLICK, this, dznqSelectLord.open.bind(dznqSelectLord));
-  menu2.ccjq.on(Event.CLICK, this, ccjqSelectLord.open.bind(ccjqSelectLord));
-  menu2.cbzz.on(Event.CLICK, this, cbzzSelectLord.open.bind(cbzzSelectLord));
-  menu2.sgdl.on(Event.CLICK, this, sgdlSelectLord.open.bind(sgdlSelectLord));
+  menu2.dznq.on(Event.CLICK, this, onSelectLord.bind('dznq'));
+  menu2.ccjq.on(Event.CLICK, this, onSelectLord.bind('ccjq'));
+  menu2.cbzz.on(Event.CLICK, this, onSelectLord.bind('cbzz'));
+  menu2.sgdl.on(Event.CLICK, this, onSelectLord.bind('sgdl'));
 }
 
 function onBack() {
   Laya.stage.removeChild(this);
-}
-
-function onShowMain() {
-  var main = new mainUI();
-  Laya.stage.addChild(main);
-
-  main.info.on(Event.CLICK, this, showBattlefiled);
 }
 
 function showBattlefiled() {
