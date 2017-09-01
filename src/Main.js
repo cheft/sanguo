@@ -36,6 +36,12 @@
     this.ui.heroLength.text = heros[0];
 
     this.ui.menuBtn.on(Event.CLICK, this, this.stop);
+    this.ui.lordHead.on(Event.CLICK, this, this.openHeroList);
+  }
+
+  Main.prototype.openHeroList = function() {
+    var heroList = new HeroList(this.period, this.lordIndex);
+    heroList.start();
   }
 
   global.Main = Main;

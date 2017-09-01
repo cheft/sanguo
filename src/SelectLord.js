@@ -46,7 +46,10 @@
   SelectLord.prototype.lordListRender = function(cell, index) {
     var label = cell.getChildByName('name');
     label.text = cell._dataSource;
-    if (index === 0) {
+    // 解决滚动时也会选中刚出现的第一项的 bug
+    if (label.borderColor === '#131313') {
+      label.borderColor = ''
+    } else if (index === 0) {
       this.lordLabelClick(0, label);
     }
     label.on(Event.CLICK, this, this.lordLabelClick, [index, label]);

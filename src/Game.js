@@ -16,9 +16,9 @@ showCG();
 function loadImages(tl) {
   Laya.loader.load(['cg/cg_01.jpg', 'cg/cg_02.jpg', 'cg/cg_03.jpg', 'cg/cg_04.jpg', 'cg/cg_05.jpg']);
   Laya.loader.load(['img/gmstart.jpg']);
-  Laya.loader.load(['img/history.jpg', 'img/btn_bg.jpg']);
+  Laya.loader.load(['img/history.jpg', 'img/btn_bg.jpg', 'img/btn_v_bg.jpg']);
   Laya.loader.load(['img/white.jpg', 'img/who.jpg', 'img/head_dznq.jpg', 'img/head_ccjq.jpg', 'img/head_cbzz.jpg', 'img/head_sgdl.jpg']);
-  Laya.loader.load(['img/map.jpg', 'img/right.jpg']);
+  Laya.loader.load(['img/map.jpg', 'img/right.jpg', 'img/close_btn_bg.png']);
 }
 
 function showCG() {
