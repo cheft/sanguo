@@ -2,7 +2,7 @@
     "x":0,
     "type":"Dialog",
     "selectedBox":1,
-    "selecteID":13,
+    "selecteID":7,
     "props":{"width":640,"top":20,"sceneColor":"#000000","left":25,"height":440},
     "nodeParent":-1,
     "label":"Dialog",
@@ -41,7 +41,7 @@
         {
             "x":15,
             "type":"List",
-            "props":{"y":80,"x":50,"width":550,"var":"heros","repeatY":8,"repeatX":1,"height":321},
+            "props":{"y":71,"x":50,"width":550,"var":"heros","repeatY":8,"repeatX":1,"height":330},
             "nodeParent":1,
             "label":"List(heros)",
             "isOpen":true,
@@ -240,7 +240,7 @@
         {
             "x":15,
             "type":"Label",
-            "props":{"y":50,"x":50,"width":44,"text":"头像","strokeColor":"#ffffff","stroke":1,"height":22,"fontSize":22,"bold":true},
+            "props":{"y":40,"x":50,"width":44,"text":"头像","strokeColor":"#ffffff","stroke":1,"height":22,"fontSize":22,"bold":true},
             "nodeParent":1,
             "label":"Label",
             "isOpen":false,
@@ -254,7 +254,7 @@
         {
             "x":15,
             "type":"Label",
-            "props":{"y":50,"x":114,"width":44,"text":"\b姓名","strokeColor":"#ffffff","stroke":1,"height":22,"fontSize":22,"bold":true},
+            "props":{"y":40,"x":114,"width":44,"text":"\b姓名","strokeColor":"#ffffff","stroke":1,"height":22,"fontSize":22,"bold":true},
             "nodeParent":1,
             "label":"Label",
             "isOpen":false,
@@ -268,7 +268,7 @@
         {
             "x":15,
             "type":"Label",
-            "props":{"y":50,"x":184,"width":44,"var":"forceLabel","text":"武力","strokeColor":"#ffffff","stroke":1,"height":22,"fontSize":22,"bold":true},
+            "props":{"y":40,"x":184,"width":44,"var":"forceLabel","text":"武力","strokeColor":"#ffffff","stroke":1,"height":22,"fontSize":22,"bold":true},
             "nodeParent":1,
             "label":"Label(forceLabel)",
             "isDirectory":false,
@@ -281,7 +281,7 @@
         {
             "x":15,
             "type":"Label",
-            "props":{"y":50,"x":258,"width":44,"var":"ruseLabel","text":"\b智谋","strokeColor":"#ffffff","stroke":1,"height":22,"fontSize":22,"bold":true},
+            "props":{"y":40,"x":258,"width":44,"var":"ruseLabel","text":"\b智谋","strokeColor":"#ffffff","stroke":1,"height":22,"fontSize":22,"bold":true},
             "nodeParent":1,
             "label":"Label(ruseLabel)",
             "isOpen":true,
@@ -295,7 +295,7 @@
         {
             "x":15,
             "type":"Label",
-            "props":{"y":50,"x":331,"width":44,"var":"typeLabel","text":"兵种","strokeColor":"#ffffff","stroke":1,"height":22,"fontSize":22,"bold":true},
+            "props":{"y":40,"x":331,"width":44,"var":"typeLabel","text":"兵种","strokeColor":"#ffffff","stroke":1,"height":22,"fontSize":22,"bold":true},
             "nodeParent":1,
             "label":"Label(typeLabel)",
             "isDirectory":false,
@@ -308,7 +308,7 @@
         {
             "x":15,
             "type":"Label",
-            "props":{"y":50,"x":410,"width":44,"var":"troopsLabel","text":"兵力","strokeColor":"#ffffff","stroke":1,"height":22,"fontSize":22,"bold":true},
+            "props":{"y":40,"x":410,"width":44,"var":"troopsLabel","text":"兵力","strokeColor":"#ffffff","stroke":1,"height":22,"fontSize":22,"bold":true},
             "nodeParent":1,
             "label":"Label(troopsLabel)",
             "isOpen":true,
@@ -322,7 +322,7 @@
         {
             "x":15,
             "type":"Label",
-            "props":{"y":50,"x":496,"width":44,"var":"experienceLabel","text":"经验","strokeColor":"#ffffff","stroke":1,"height":22,"fontSize":22,"color":"#000000","bold":true},
+            "props":{"y":40,"x":496,"width":44,"var":"experienceLabel","text":"经验","strokeColor":"#ffffff","stroke":1,"height":22,"fontSize":22,"color":"#000000","bold":true},
             "nodeParent":1,
             "label":"Label(experienceLabel)",
             "isOpen":false,
@@ -336,7 +336,7 @@
         {
             "x":15,
             "type":"Label",
-            "props":{"y":50,"x":552,"width":44,"var":"levelLabel","text":"等级","strokeColor":"#ffffff","stroke":1,"height":22,"fontSize":22,"bold":true},
+            "props":{"y":40,"x":552,"width":44,"var":"levelLabel","text":"等级","strokeColor":"#ffffff","stroke":1,"height":22,"fontSize":22,"bold":true},
             "nodeParent":1,
             "label":"Label(levelLabel)",
             "isDirectory":false,

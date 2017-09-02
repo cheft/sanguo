@@ -15,7 +15,7 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":0,"x":-10,"skin":"img/map.jpg"},
+            "props":{"y":0,"x":0,"skin":"img/map.jpg"},
             "nodeParent":1,
             "label":"Image",
             "isDirectory":false,

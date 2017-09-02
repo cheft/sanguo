@@ -5,6 +5,7 @@
   function Main(period, lordIndex) {
     this.period = period; // 四个时期：dznq, ccjq, cbzz, sgdl
     this.lordIndex = lordIndex;
+    this.cities = [];
     this.ui = new mainUI();
     
     this.handleUI();
@@ -37,6 +38,52 @@
 
     this.ui.menuBtn.on(Event.CLICK, this, this.stop);
     this.ui.lordHead.on(Event.CLICK, this, this.openHeroList);
+
+    this.flagCityMap();
+  }
+  
+  // 'img/city_hiscity.jpg', 'img/city_emcity.jpg', 'img/city_mycity.jpg'
+  Main.prototype.flagCityMap = function(cities) {
+    // if (this.cities.length > 0) {
+    //   for (var i = 0; i < this.cities.length; i++) {
+    //     this.ui.removeChild(this.cities[i]);
+    //   }
+    //   this.cities = [];
+    // }
+
+    var positions = data.cityPosition;
+    // 获取这个时期每个城池是属于哪个君主的
+    var owns = data[this.period + 'CitySetOwn'];
+    for (var i = 0; i < positions.length; i++) {
+      var imgUrl = 'img/city_hiscity.jpg';
+      if (owns[i] === 99) {
+        imgUrl = 'img/city_emcity.jpg';
+      } else if (owns[i] === this.lordIndex) {
+        imgUrl = 'img/city_mycity.jpg'; 
+      }
+      
+      var p = positions[i].split(' ');
+      var sp = new Laya.Sprite();
+      sp.loadImage(imgUrl);
+      sp.pos(p[0], p[1]);
+      this.cities.push(sp);
+      this.ui.addChild(sp);
+
+      sp.on(Event.CLICK, this, this.cityHandle.bind(this, i));
+    }
+  }
+
+  Main.prototype.cityHandle = function(i) {
+    // 通过城池 id 找到归属君主的 id
+    var lordId = data[this.period + 'CitySetOwn'][i];
+    if (this.lordIndex === lordId) {
+      console.log('我自己的城池');
+    } else if (lordId === 99) {
+      console.log('无人占领城池');
+    } else {
+      var lordName = data[this.period + 'Lord'][lordId];
+      console.log(lordName + '的城池');
+    }
   }
 
   Main.prototype.openHeroList = function() {
