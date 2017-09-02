@@ -4,9 +4,10 @@ var Handler = Laya.Handler;
 Laya.init(800, 480, Laya.WebGL);
 Laya.stage.screenMode = Laya.Stage.SCREEN_HORIZONTAL;
 // Laya.stage.fullScreenEnabled = true;
+// http://ldc.layabox.com/doc/?nav=zh-js-1-8-4
 Laya.stage.scaleMode = Laya.Stage.SCALE_FIXED_AUTO;
+// Laya.stage.scaleMode = Laya.Stage.SCALE_EXACTFIT;
 
-// Laya.stage.scaleMode = Laya.Stage.SCALE_NOBORDER;
 // Laya.stage.alignH = Laya.Stage.ALIGN_CENTER;
 // Laya.stage.alignV = Laya.Stage.ALIGN_MIDDLE;
 
@@ -15,10 +16,10 @@ showCG();
 
 function loadImages(tl) {
   Laya.loader.load(['cg/cg_01.jpg', 'cg/cg_02.jpg', 'cg/cg_03.jpg', 'cg/cg_04.jpg', 'cg/cg_05.jpg']);
-  Laya.loader.load(['img/gmstart.jpg']);
+  Laya.loader.load(['img/gmstart.jpg', 'img/modal_bg.jpg']);
   Laya.loader.load(['img/history.jpg', 'img/btn_bg.jpg', 'img/btn_v_bg.jpg']);
   Laya.loader.load(['img/white.jpg', 'img/who.jpg', 'img/head_dznq.jpg', 'img/head_ccjq.jpg', 'img/head_cbzz.jpg', 'img/head_sgdl.jpg']);
-  Laya.loader.load(['img/map.jpg', 'img/right.jpg', 'img/close_btn_bg.png', 'img/city_hiscity.jpg', 'img/city_emcity.jpg', 'img/city_mycity.jpg']);
+  Laya.loader.load(['img/map.jpg', 'img/right.jpg', 'img/city_hiscity.jpg', 'img/city_emcity.jpg', 'img/city_mycity.jpg']);
 }
 
 function showCG() {

@@ -12,5 +12,4 @@ var util = {
     // 通过截取的方式获得纹理切图: x, y, width, height
     return Laya.Texture.create(texture,  col * 120, row * 120, 120, 120);;
   }
-
 }

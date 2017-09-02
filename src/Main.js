@@ -75,14 +75,18 @@
 
   Main.prototype.cityHandle = function(i) {
     // 通过城池 id 找到归属君主的 id
-    var lordId = data[this.period + 'CitySetOwn'][i];
-    if (this.lordIndex === lordId) {
+    var lordIndex = data[this.period + 'CitySetOwn'][i];
+    if (this.lordIndex === lordIndex) {
       console.log('我自己的城池');
-    } else if (lordId === 99) {
+      var cityCmd = new CityCommand(this.period, lordIndex, i);
+      cityCmd.start();
+    } else if (lordIndex === 99) {
       console.log('无人占领城池');
     } else {
-      var lordName = data[this.period + 'Lord'][lordId];
+      var lordName = data[this.period + 'Lord'][lordIndex];
       console.log(lordName + '的城池');
+      var cityCmd = new CityCommand(this.period, lordIndex, i);
+      cityCmd.start();
     }
   }
 
