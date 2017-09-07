@@ -1,6 +1,6 @@
 var util = {
-    // 根据将领名称在图片上显示头像
-    getHeadImage: function(period, name) {
+  // 根据将领名称在图片上显示头像
+  getHeadImage: function(period, name) {
     // 从所有将领列表中获取君主的索引
     var imgIndex = data[period + 'HerosName'].indexOf(name);
     // 因为头像是分不同时间，并且所有的头像在一起的
