@@ -8,6 +8,7 @@
     this.cities = [];
     this.ui = new mainUI();
     
+    resUtil.initCitySatrap(period); // 设置每个城市的太守
     this.handleUI();
   }
 

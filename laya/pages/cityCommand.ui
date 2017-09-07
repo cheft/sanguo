@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Dialog",
-    "selectedBox":10,
-    "selecteID":35,
+    "selectedBox":27,
+    "selecteID":17,
     "props":{"width":640,"top":20,"sceneColor":"#000000","left":25,"height":440},
     "nodeParent":-1,
     "label":"Dialog",
@@ -70,13 +70,14 @@
             "props":{"y":40,"x":43,"width":275,"height":364},
             "nodeParent":1,
             "label":"Panel",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":11,
             "child":[
                 {
+                    "x":30,
                     "type":"Button",
                     "props":{"y":10,"x":10,"stateNum":"1","skin":"img/btn_bg.jpg","labelSize":24,"label":"内政"},
                     "nodeParent":11,
@@ -89,6 +90,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Button",
                     "props":{"y":70,"x":10,"stateNum":"1","skin":"img/btn_bg.jpg","labelSize":24,"label":"人员"},
                     "nodeParent":11,
@@ -101,6 +103,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Button",
                     "props":{"y":130,"x":10,"stateNum":"1","skin":"img/btn_bg.jpg","labelSize":24,"label":"军备"},
                     "nodeParent":11,
@@ -113,6 +116,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Button",
                     "props":{"y":190,"x":10,"stateNum":"1","skin":"img/btn_bg.jpg","labelSize":24,"label":"外交"},
                     "nodeParent":11,
@@ -125,17 +129,19 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Panel",
                     "props":{"y":10,"x":139,"width":100,"height":349},
                     "nodeParent":11,
                     "label":"Panel",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":27,
                     "child":[
                         {
+                            "x":45,
                             "type":"Button",
                             "props":{"y":100,"x":0,"stateNum":"1","skin":"img/btn_bg.jpg","labelSize":24,"label":"招商","height":46},
                             "nodeParent":27,
@@ -148,10 +154,11 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Button",
-                            "props":{"y":0,"x":0,"stateNum":"1","skin":"img/btn_bg.jpg","labelSize":24,"label":"搜寻","height":46},
+                            "props":{"y":0,"x":0,"var":"searchBtn","stateNum":"1","skin":"img/btn_bg.jpg","labelSize":24,"label":"搜寻","height":46},
                             "nodeParent":27,
-                            "label":"Button",
+                            "label":"Button(searchBtn)",
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
@@ -160,6 +167,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Button",
                             "props":{"y":50,"x":0,"stateNum":"1","skin":"img/btn_bg.jpg","labelSize":24,"label":"开垦","height":46},
                             "nodeParent":27,
@@ -172,6 +180,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Button",
                             "props":{"y":200,"stateNum":"1","skin":"img/btn_bg.jpg","labelSize":24,"label":"出巡","height":46},
                             "nodeParent":27,
@@ -186,6 +195,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Button",
                             "props":{"y":300,"x":0,"stateNum":"1","skin":"img/btn_bg.jpg","labelSize":24,"label":"\b资送","height":46},
                             "nodeParent":27,
@@ -198,6 +208,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Button",
                             "props":{"y":150,"x":0,"stateNum":"1","skin":"img/btn_bg.jpg","labelSize":24,"label":"治理","height":46},
                             "nodeParent":27,
@@ -210,6 +221,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Button",
                             "props":{"y":250,"x":0,"stateNum":"1","skin":"img/btn_bg.jpg","labelSize":24,"label":"交易","height":46},
                             "nodeParent":27,

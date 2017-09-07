@@ -2,9 +2,11 @@
   var Event = Laya.Event;
   var Handler = Laya.Handler;
 
-  function HeroList(period, lordIndex) {
+  function HeroList(period, lordIndex, data) {
     this.period = period; // 四个时期：dznq, ccjq, cbzz, sgdl
     this.lordIndex = lordIndex;
+    this.data = data;
+
     this.showMode = 'basic';
     this.ui = new heroListUI();
     this.handleUI();
@@ -29,17 +31,17 @@
   }
 
   HeroList.prototype.handleData = function() {
-    // 获取这个时期的全部武将
-    this.ui.heros.array = data[this.period + 'HerosName'];
+    this.ui.heros.array = this.data;
     this.ui.heros.renderHandler = new Handler(this, this.herosRender);
   }
 
   HeroList.prototype.herosRender = function(cell, index) {
-    var texture = util.getHeadImage(this.period, cell._dataSource);
-    cell.getChildByName('head').graphics.drawTexture(texture, 0, 0, 40, 40); // 头像
-    cell.getChildByName('name').text = cell._dataSource; // 名称
     // 获取当前武将的信息
-    var heroInfo = data[this.period + 'HerosInfo'][index].split(' ');
+    var heroInfo = cell._dataSource.split(' ');
+    var name = data[this.period + 'HerosName'][heroInfo[0]];
+    var texture = util.getHeadImage(this.period, name);
+    cell.getChildByName('head').graphics.drawTexture(texture, 0, 0, 40, 40); // 头像
+    cell.getChildByName('name').text = name; // 名称
 
     // basicInfo
     cell.getChildByName('force').text = heroInfo[3]; // 物理
