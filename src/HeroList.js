@@ -2,10 +2,12 @@
   var Event = Laya.Event;
   var Handler = Laya.Handler;
 
-  function HeroList(period, lordIndex, data) {
+  function HeroList(period, lordIndex, cityIndex, heros, parent) {
     this.period = period; // 四个时期：dznq, ccjq, cbzz, sgdl
     this.lordIndex = lordIndex;
-    this.data = data;
+    this.cityIndex = cityIndex;
+    this.heros = heros;
+    this.parent = parent;
 
     this.showMode = 'basic';
     this.ui = new heroListUI();
@@ -28,10 +30,11 @@
 
     this.ui.basicInfoBtn.on(Event.CLICK, this, this.viewBasicInfo);
     this.ui.otherInfoBtn.on(Event.CLICK, this, this.viewOtherInfo);
+    this.ui.heros.selectHandler = new Handler(this, this.handleHeroSelect);
   }
 
   HeroList.prototype.handleData = function() {
-    this.ui.heros.array = this.data;
+    this.ui.heros.array = this.heros;
     this.ui.heros.renderHandler = new Handler(this, this.herosRender);
   }
 
@@ -113,6 +116,12 @@
 
     this.showMode = 'other';
     this.ui.heros.refresh();
+  }
+
+  HeroList.prototype.handleHeroSelect = function(index) {
+    var hero = this.ui.heros.getItem(index);
+    command.souxun(this.period, this.cityIndex, hero[0]);
+    this.parent.handleUI();
   }
 
   global.HeroList = HeroList;

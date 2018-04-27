@@ -8,19 +8,20 @@ var mX = 0;
 var mY = 0;
 var tiledMap;
 
-function Battlefiled(options) {
+function Battlefield(options) {
   this.options = options;
   tiledMap = new TiledMap();
+  this.ui = new battlefieldUI();
 }
 
-Battlefiled.prototype.load = function() {
+Battlefield.prototype.load = function() {
   mX = mY = 0;
-  tiledMap.createMap("tiledmap/json/map_06.json", new Rectangle(0, 0, 800, 480), new Handler(this, this.completeHandler));
+  tiledMap.createMap("tiledmap/json/map_01.json", new Rectangle(0, 0, 800, 480), new Handler(this, this.completeHandler));
   Laya.stage.on(Event.MOUSE_DOWN, this, mouseDown);
 	Laya.stage.on(Event.MOUSE_UP, this, mouseUp);
 }
 
-Battlefiled.prototype.completeHandler = function () {
+Battlefield.prototype.completeHandler = function () {
 
 }
 

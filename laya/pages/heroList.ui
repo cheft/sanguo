@@ -2,7 +2,7 @@
     "x":0,
     "type":"Dialog",
     "selectedBox":1,
-    "selecteID":28,
+    "selecteID":7,
     "props":{"width":640,"top":20,"sceneColor":"#000000","left":25,"height":440},
     "nodeParent":-1,
     "label":"Dialog",
@@ -28,22 +28,21 @@
         {
             "x":15,
             "type":"List",
-            "props":{"y":71,"x":50,"width":550,"var":"heros","repeatY":8,"repeatX":1,"height":330},
+            "props":{"y":71,"x":50,"width":550,"var":"heros","selectEnable":true,"repeatY":8,"repeatX":1,"mouseEnabled":true,"height":330},
             "nodeParent":1,
             "label":"List(heros)",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":7,
             "child":[
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":0,"x":0,"width":110,"renderType":"render","name":"render","height":44},
                     "nodeParent":7,
                     "label":"Box(render)",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":false,
                     "hasChild":true,
@@ -211,7 +210,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"VScrollBar",
                     "props":{"y":4,"x":530,"width":1,"pivotY":8,"pivotX":-30,"name":"scrollBar","height":330},
                     "nodeParent":7,

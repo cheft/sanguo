@@ -38,7 +38,7 @@
     this.ui.heroLength.text = heros[0];
 
     this.ui.menuBtn.on(Event.CLICK, this, this.stop);
-    this.ui.lordHead.on(Event.CLICK, this, this.openHeroList);
+    this.ui.lordHead.on(Event.CLICK, this, this.openBattlefield);
 
     this.flagCityMap();
   }
@@ -95,6 +95,12 @@
     var heroList = new HeroList(this.period, this.lordIndex);
     heroList.start();
   }
+
+  Main.prototype.openBattlefield = function() {
+    var battlefield = new Battlefield();
+    battlefield.load();
+  }
+  
 
   global.Main = Main;
 })(window);

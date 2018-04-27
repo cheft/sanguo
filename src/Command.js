@@ -20,7 +20,8 @@ var command = {
         resUtil.setACityInfo(period, cityId, 13, cityFood);
         console.log('城中找到粮食 ' + food);
         break;
-      case 2:
+      // TODO: case 2, 逻辑有问题
+      case 20:
         var heros = resUtil.getCityHerosOnSide(period, cityId);
         if (heros.length > 0) {
           for (var i = 0; i < heros.length; i++) {
@@ -41,6 +42,7 @@ var command = {
           } else {
             // 设置这个人的归属为这座城市的归属人
             resUtil.setAHeroInfo(period, cityId, 1, cityInfo[1]);
+            // TODO: split 前有时为 undefined
             var name = data[period + 'HerosName'][heros[rNum].split(' ')[0]];
             console.log('城中找到武将 ' + name);
           }
@@ -48,7 +50,8 @@ var command = {
           console.log('什么也没找到……');
         }
         break;
-      case 3:
+      // TODO: case 3, 逻辑有问题
+      case 30:
         // 寻道具逻辑跟上面差不多
         var goods = resUtil.getGoodsOnSide(period, cityId);
         if (goods.length > 0) {
@@ -57,6 +60,7 @@ var command = {
             // 如果伯乐是当前搜索人，直接找到退出
             if (gInfo[7] == (heroId+1)) {
               // 设置这个道具的所在城池为这座城池
+              var goodId = i;
               resUtil.setAGoodInfo(period, goodId, 6, cityId);
               var name = data['GoodsName'][parseInt(gInfo[0]) - 1];
               console.log('城中找到道具 ' + name);
@@ -69,6 +73,8 @@ var command = {
             console.log('听说城中有件宝物，可惜臣未能寻到。');
           } else {
             // 设置这个道具的所在城池为这座城池
+            // TODO: split 前有时为 undefined
+            var goodId = rNum;
             resUtil.setAGoodInfo(period, goodId, 6, cityId);
             var name = data['GoodsName'][parseInt(goods[rNum].split(' ')[0]) - 1];
             console.log('城中找到道具 ' + name);

@@ -54,8 +54,7 @@
 
   CityCommand.prototype.openHeroList = function() {
     var heros = resUtil.getCityHeros(this.period, this.cityIndex);
-    console.log(heros.length, 111);
-    var heroList = new HeroList(this.period, this.lordIndex, heros);
+    var heroList = new HeroList(this.period, this.lordIndex, this.cityIndex, heros, this);
     heroList.start();
   }
 

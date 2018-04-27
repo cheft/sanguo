@@ -115,7 +115,7 @@ var resUtil = {
   },
 
   // 修改(设置)某时期某个武将的属性
-  setAHeroInfo: function(period, heroId, index, value) {
+  setAHeroInfo: function(period, cityId, index, value) {
     var info = data[period + 'HerosInfo'][cityId].split(' ');
     info[index] = value;
     data[period + 'HerosInfo'][cityId] = info.join(' ');
